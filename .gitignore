@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Jany files
+Data/
+Presentations/
+
 # C extensions
 *.so
 
