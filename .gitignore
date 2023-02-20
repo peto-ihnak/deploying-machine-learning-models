@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-#Jany files
+#Jany files to hide from sync
 Data/
 Presentations/
 
