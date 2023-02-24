@@ -1,17 +1,18 @@
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence
-
+import os 
 from pydantic import BaseModel
 from strictyaml import YAML, load
 
-import regression_model
+#import regression_model
 
 # Project Directories
-PACKAGE_ROOT = Path(regression_model.__file__).resolve().parent
-ROOT = PACKAGE_ROOT.parent
-CONFIG_FILE_PATH = PACKAGE_ROOT / "config.yml"
-DATASET_DIR = PACKAGE_ROOT / "datasets"
-TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
+# PACKAGE_ROOT = Path(regression_model'.__file__).resolve().parent
+PACKAGE_ROOT = 'C:/Users/pircajan/Documents/GitHub/deploying-machine-learning-models/assignment-Jany/classification_model/'
+ROOT = 'C:/Users/pircajan/Documents/GitHub/deploying-machine-learning-models/assignment-Jany/'
+CONFIG_FILE_PATH = PACKAGE_ROOT + "config.yml"
+DATASET_DIR = PACKAGE_ROOT + "datasets"
+TRAINED_MODEL_DIR = PACKAGE_ROOT + "trained_models"
 
 
 class AppConfig(BaseModel):
@@ -56,7 +57,7 @@ class Config(BaseModel):
 
 def find_config_file() -> Path:
     """Locate the configuration file."""
-    if CONFIG_FILE_PATH.is_file():
+    if os.path.isfile(CONFIG_FILE_PATH):
         return CONFIG_FILE_PATH
     raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
 

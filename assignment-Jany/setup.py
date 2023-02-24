@@ -10,12 +10,16 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
+
+exec(open("[classification_model]/_version.py").read())
+setup(version=__version__)
+
 # Package meta-data.
 NAME = 'Jany-Titanic-model'
 DESCRIPTION = "Example of deployment regression model into a package."
 URL = "https://github.com/datasciencedojo/datasets/blob/master/titanic.csv"
 EMAIL = "jan.pircak@tietoevry.com"
-AUTHOR = "ChristopherGS"
+AUTHOR = "BrAIn_team"
 REQUIRES_PYTHON = ">=3.6.0"
 
 

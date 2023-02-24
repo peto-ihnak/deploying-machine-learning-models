@@ -9,9 +9,9 @@ import pandas as pd
 import joblib
 from pathlib import Path
 from sklearn.pipeline import Pipeline
-from regression_model import __version__ as _version
+from classification_model._version import __version__ as _version
 
-from regression_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
+from classification_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
 
 
 def load_dataset(*, file_name: str) -> pd.DataFrame:

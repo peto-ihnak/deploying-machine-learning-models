@@ -21,15 +21,15 @@ cabin:
 #Variables:
 target: survived 
 features:
-   	- pclass
-   	- sex
-   	- age
-   	- sibsp
-   	- parch
-   	- fare
-   	- cabin
-   	- embarked
-   	- title
+    - pclass
+    - sex
+    - age
+    - sibsp
+    - parch
+    - fare
+    - cabin
+    - embarked
+    - title
     
 
 # Model params
