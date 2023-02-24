@@ -1,7 +1,7 @@
 include *.txt
 include *.md
 include *.pkl
-recursive-include ./regression_model/*
+recursive-include ./classification_model/*
 
 include classification_model/datasets/titanic.csv
 include classification_model/trained_models/*.pkl

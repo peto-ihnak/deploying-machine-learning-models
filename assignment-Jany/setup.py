@@ -9,8 +9,8 @@ Created on Thu Feb 23 14:40:19 2023
 from pathlib import Path
 from setuptools import find_packages, setup
 
-from classification_model._version import __version__
-setup(version=__version__)
+#exec(open("classification_model/_version.py").read())
+#setup(version=__version__)
 
 # Package meta-data.
 NAME = 'Jany-Titanic-model'
@@ -32,7 +32,7 @@ long_description = DESCRIPTION
 about = {}
 ROOT_DIR = Path(__file__).resolve().parent
 REQUIREMENTS_DIR = ROOT_DIR / 'requirements'
-PACKAGE_DIR = ROOT_DIR / 'regression_model'
+PACKAGE_DIR = ROOT_DIR / 'classification_model'
 with open(PACKAGE_DIR / "VERSION") as f:
     _version = f.read().strip()
     about["__version__"] = _version

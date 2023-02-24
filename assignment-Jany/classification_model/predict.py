@@ -6,14 +6,14 @@ Created on Thu Feb 23 15:43:57 2023
 """
 import typing as t
 
-from config.core import config
-from regression_model import __version__ as _version
-from processing.data_manager import load_pipeline
-from processing.validation import validate_inputs
+from classification_model.config.core import config
+from classification_model import __version__ as _version
+from classification_model.processing.data_manager import load_pipeline
+from classification_model.processing.validation import validate_inputs
 import pandas as pd
 
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
-titanic_pipe = load_pipeline(pipeline_file_name)
+titanic_pipe = load_pipeline(file_name=pipeline_file_name)
 
 
 def make_predictions(*, input_data: t.Union[pd.DataFrame, dict], ) -> dict:

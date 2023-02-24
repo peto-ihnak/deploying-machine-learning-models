@@ -7,14 +7,14 @@ Created on Thu Feb 23 15:48:41 2023
 from typing import List, Optional, Tuple
 import pandas as pd 
 import numpy as np
-from config.core import config
+from classification_model.config.core import config
 from pydantic import BaseModel, ValidationError # Validation of variables...
 '''
 Package for data validation or preprocessing before inference
 '''
 
 
-def validate_inputs(*, input_data: pd.Dataframe) -> pd.DataFrame:
+def validate_inputs(*, input_data: pd.DataFrame) -> pd.DataFrame:
 
     relevant_data = input_data[config.model_config.features].copy()
     validated_data = drop_na_inputs(input_data=relevant_data)
@@ -33,7 +33,7 @@ def validate_inputs(*, input_data: pd.Dataframe) -> pd.DataFrame:
 def drop_na_inputs(*, input_data: pd.DataFrame) -> pd.DataFrame:
     """Check model inputs for na values and filter."""
     
-    input_data.dropna(inplace=True)
+    #input_data.dropna(inplace=True)
 
     return input_data
 

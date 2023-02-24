@@ -9,7 +9,7 @@ from processing.data_manager import load_dataset, save_pipeline
 from sklearn.model_selection import train_test_split
 from pipeline import titanic_pipe
 from sklearn.metrics import accuracy_score, roc_auc_score
-
+from classification_model.config.core import DATASET_DIR
 
 
 def run_training() -> None:
@@ -25,7 +25,6 @@ def run_training() -> None:
        )
     
     titanic_pipe.fit(X_train, y_train)
-    
     
     
     class_ = titanic_pipe.predict(X_train)
@@ -45,7 +44,12 @@ def run_training() -> None:
     print('test roc-auc: {}'.format(roc_auc_score(y_test, pred)))
     print('test accuracy: {}'.format(accuracy_score(y_test, class_)))
     print()
-    
+     
+    ''' Save test data...
+    data = X_test.copy()
+    data['survived'] = y_test
+    data.to_csv(DATASET_DIR / 'titanic_test.csv', index=False)
+    '''
     
     save_pipeline(pipeline_to_persist=titanic_pipe)
     

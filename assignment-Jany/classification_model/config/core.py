@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import List, Optional
 import os 
 from pydantic import BaseModel
 from strictyaml import YAML, load
@@ -23,6 +23,7 @@ class AppConfig(BaseModel):
     package_name: str
     data_file: str
     pipeline_save_file: str
+    test_data_file: str
 
 
 class ModelConfig(BaseModel):

@@ -1,6 +1,7 @@
 package_name: regression_model
 
 data_file: titanic.csv
+test_data_file: titanic_test.csv
 pipeline_save_file: Jany_titanicModel_v
 
 
