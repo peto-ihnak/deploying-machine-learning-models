@@ -15,8 +15,8 @@ from feature_engine.encoding import (
     RareLabelEncoder,
     OneHotEncoder)
 
-from regression_model.config.core import config
-from regression_model.processing.features import ExtractLetterTransformer
+from classification_model.config.core import config
+from classification_model.processing.features import ExtractLetterTransformer
 
 
 titanic_pipe = Pipeline([

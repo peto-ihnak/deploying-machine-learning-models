@@ -31,6 +31,7 @@ def run_training() -> None:
     class_ = titanic_pipe.predict(X_train)
     pred = titanic_pipe.predict_proba(X_train)[:,1]
     
+    print('Model of Titanic has been trained sucessfully !')
     # determine mse and rmse
     print('train roc-auc: {}'.format(roc_auc_score(y_train, pred)))
     print('train accuracy: {}'.format(accuracy_score(y_train, class_)))

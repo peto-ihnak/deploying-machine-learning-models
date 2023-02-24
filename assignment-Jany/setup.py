@@ -7,11 +7,9 @@ Created on Thu Feb 23 14:40:19 2023
 
 
 from pathlib import Path
-
 from setuptools import find_packages, setup
 
-
-exec(open("[classification_model]/_version.py").read())
+from classification_model._version import __version__
 setup(version=__version__)
 
 # Package meta-data.
